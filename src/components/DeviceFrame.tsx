@@ -5,7 +5,7 @@ interface DeviceFrameProps {
 
 const DeviceFrame: React.FC<DeviceFrameProps> = ({ children, className = '' }) => {
   return (
-    <div className={`w-full max-w-[1920px] h-screen md:h-[1080px] bg-white rounded-[40px] shadow-2xl relative overflow-hidden flex flex-col justify-start ${className}`}>
+    <div className={`w-full max-w-[1920px] md:h-[1080px] bg-white rounded-[40px] shadow-2xl relative overflow-hidden flex flex-col justify-start py-8 md:py-12 ${className}`}>
       {children}
     </div>
   );

@@ -3,7 +3,7 @@ import RSVPButton from './RSVPButton';
 
 const WeddingContent: React.FC = () => {
   return (
-    <div className="p-4 md:p-10 text-center max-w-7xl mx-auto w-full h-full flex flex-col justify-center">
+    <div className="p-4 md:p-10 text-center max-w-7xl mx-auto w-full flex flex-col justify-center">
       <div className="space-y-4 md:space-y-10">
         <Postcard />
         <h1 className="font-playfair text-3xl md:text-5xl text-[#1a1a1a]">
