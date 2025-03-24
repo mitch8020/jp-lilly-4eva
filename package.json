@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/oxide-win32-ia32-msvc": "^0.0.0-insiders.8fb9ae8f",
     "@tailwindcss/vite": "^4.0.15",
     "framer-motion": "^12.5.0",
     "react": "^19.0.0",
