@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import DeviceFrame from './components/DeviceFrame';
 import WeddingContent from './components/WeddingContent';
 import FAQ from './components/FAQ';

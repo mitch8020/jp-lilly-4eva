@@ -1,5 +1,4 @@
 import Postcard from './Postcard';
-import RSVPButton from './RSVPButton';
 
 const WeddingContent: React.FC = () => {
   const generateCalendarEvent = () => {
