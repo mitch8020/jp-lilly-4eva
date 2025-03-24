@@ -1,5 +1,62 @@
 import { useState } from 'react';
 
+interface Hotel {
+  name: string;
+  url: string;
+  distance?: string;
+  note?: string;
+}
+
+const hotels: Hotel[] = [
+  {
+    name: "The Gallatin",
+    url: "https://thegallatinhotel.com/",
+    note: "Next to the reception!"
+  },
+  {
+    name: "Waymore's Guest House",
+    url: "http://waymoresnashville.com",
+    distance: "1.7 mi away"
+  },
+  {
+    name: "The Russell",
+    url: "https://www.russellnashville.com/",
+    distance: "1.8 mi away"
+  },
+  {
+    name: "Noelle",
+    url: "https://www.noelle-nashville.com",
+    distance: "3.7 mi away"
+  },
+  {
+    name: "Bobby Hotel",
+    url: "http://www.bobbyhotel.com/",
+    distance: "3.7 mi away"
+  },
+  {
+    name: "Dream Nashville, by Hyatt",
+    url: "https://www.hyatt.com/dream-hotels/en-US/bnadz-dream-nashville?src=corp_lclb_google_seo_bnadz&utm_source=google&utm_medium=organic&utm_campaign=lmr",
+    distance: "3.7 mi away"
+  },
+  {
+    name: "Inn at Opryland (Marriott)",
+    url: "https://www.marriott.com/en-us/hotels/bnagi-the-inn-at-opryland-a-gaylord-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
+    distance: "5.6 mi away"
+  },
+];
+
+const generateHotelList = (): string => {
+  return hotels.map(hotel => 
+    `<div class="flex justify-between items-center mb-2">
+      <a href='${hotel.url}' target='_blank' rel='noopener noreferrer' class='text-[#D4B9A9] hover:text-[#E8D3C7] transition-colors'>${hotel.name}</a>
+      <div class="text-gray-500">
+        ${hotel.distance ? `<span>${hotel.distance}</span>` : ''}
+        ${hotel.note ? `<span>${hotel.note}</span>` : ''}
+      </div>
+    </div>`
+  ).join('');
+};
+
 interface FAQItem {
   question: string;
   answer: string;
@@ -25,6 +82,10 @@ const faqItems: FAQItem[] = [
   {
     question: "Will there be a reception?",
     answer: "Yes, the reception will follow immediately after the ceremony at the same location."
+  },
+  {
+    question: "Where can I stay?",
+    answer: `Here are some recommended hotels in the area: <br/><br/>${generateHotelList()}`
   }
 ];
 
@@ -48,7 +109,10 @@ const FAQ: React.FC = () => {
             </button>
             {openIndex === index && (
               <div className="px-6 py-4 bg-gray-50">
-                <p className="text-gray-600">{item.answer}</p>
+                <div 
+                  className="text-gray-600"
+                  dangerouslySetInnerHTML={{ __html: item.answer }}
+                />
               </div>
             )}
           </div>

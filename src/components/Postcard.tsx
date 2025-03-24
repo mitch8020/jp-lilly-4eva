@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import epSquare from '../assets/ep-square.jpg';
+import bSide from '../assets/b-side-cd.jpg';
 
 interface PostcardProps {
   className?: string;
@@ -30,7 +31,7 @@ const Postcard: React.FC<PostcardProps> = ({ className = '' }) => {
           style={{ transform: 'rotateY(180deg)' }}
         >
           <img 
-            src={epSquare} 
+            src={bSide} 
             alt="Wedding invitation back" 
             className="w-full h-full object-cover"
           />
