@@ -86,6 +86,10 @@ const faqItems: FAQItem[] = [
   {
     question: "Where can I stay?",
     answer: `Here are some recommended hotels in the area: <br/><br/>${generateHotelList()}`
+  },
+  {
+    question: "Can I see pictures of your cats?",
+    answer: "Of course! We'd love to share our furry family with you. <a href='/cats' class='text-[#D4B9A9] hover:text-[#E8D3C7] transition-colors'>Click here to meet our cats</a>."
   }
 ];
 
