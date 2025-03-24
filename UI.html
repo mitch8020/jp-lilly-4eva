@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP & Lilly Wedding RSVP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .device-frame {
+            width: 1920px;
+            height: 1080px;
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .postcard {
+            width: 600px;
+            height: 400px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            cursor: pointer;
+            margin: 40px auto;
+        }
+        .postcard.flipped {
+            transform: rotateY(180deg);
+        }
+        .postcard-front, .postcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .postcard-front {
+            background: url('./src/assets/playful-top.jpg') center/cover;
+        }
+        .postcard-back {
+            background: url('./src/assets/playful-bottom.jpg') center/cover;
+            transform: rotateY(180deg);
+        }
+        .postcard img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        .date-location {
+            font-size: 1.5rem;
+            color: #4a4a4a;
+            margin-bottom: 40px;
+        }
+        .rsvp-button {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .rsvp-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="device-frame">
+        <div class="content">
+            <div class="postcard" onclick="this.classList.toggle('flipped')">
+                <div class="postcard-front">
+                    <img src="./src/assets/playful-top.jpg" alt="JP & Lilly" class="w-full h-full object-cover">
+                </div>
+                <div class="postcard-back">
+                    <img src="./src/assets/playful-bottom.jpg" alt="JP & Lilly" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <h1>JP & Lilly</h1>
+            <div class="date-location">
+                November 29, 2025<br>
+                Emerson Hall<br>
+                Nashville, TN
+            </div>
+            <button class="rsvp-button">RSVP</button>
+        </div>
+    </div>
+</body>
+</html> 

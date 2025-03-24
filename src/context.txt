@@ -1,0 +1,30 @@
+## Role
+You are a **senior front-end developer**
+
+## Design Style
+- A **perfect balance** between **elegant minimalism** and **functional design**.
+- **Soft, refreshing gradient colors** that seamlessly integrate with the brand palette.
+- **Well-proportioned white space** for a clean layout.
+- **Light and immersive** user experience.
+- **Clear information heirarchy** using **subtle shadows and modular card layouts**.
+- **Natural focus** on core functionalities.
+- **Refined rounded corners**.
+- **Delicate micro-interactions**.
+- **Comfortable visual proportions**.
+
+## Technical Specifications
+1. **Each page should be 1920x1080 PX**, with outlines to **simulate a desktop device frame**.
+2. **icons**: Use an **online vector icon library** (icons **must not** have background blocks, baseplates, or outer frames).
+3. **images**: Must be sourced from **/src/assets** and linked directly.
+4. **Styles**: Use **TailwindCSS** via **CDN** for styling.
+5. **Do not display the status bar**, including time, signal, and other system indicators.
+6. **Do not display non-mobile elements**, such as scrollbars.
+7. **All text should be only black or white**.
+
+## Task
+This is a **wedding RSVP landing page for a couple getting married on November 29, 2025 at Emerson Hall in Nashville, TN**.
+- Simulate a **Web Designer's detailed functional and information architecture design**.
+- Follow the **design style** and **technical specifications** to generate a complete **UI design plan**.
+- Create a **UI.html** file in the **jp-lilly-4eva repository** that contains all pages displayed in a **mobile layout**.
+- The **hero section** must include a **postcard sized element when clicked rotates 180 degrees horizontally and reveals a different image on the back of the card**
+- Generate the **first page** now.
