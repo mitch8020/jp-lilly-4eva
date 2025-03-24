@@ -7,10 +7,18 @@ const WeddingContent: React.FC = () => {
       <div className="space-y-6 md:space-y-12">
         <Postcard />
         <div>
-          <div className="font-cormorant text-2xl md:text-3xl text-gray-600 font-light tracking-wider uppercase">
-            <div className="mb-2">November 29, 2025</div>
-            <div className="mb-2 font-playfair">Emerson Hall</div>
-            <div>Nashville, Tennessee</div>
+          <div className="font-playfair text-gray-600 font-light tracking-wider space-y-4 md:space-y-6">
+            <div className="text-xl md:text-2xl uppercase">Emerson Hall</div>
+            <div className="text-base md:text-lg">November 29, 2025</div>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=2512+Gallatin+Avenue+Nashville+TN+37206" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="text-base md:text-lg group-hover:text-indigo-600 transition-colors">2512 Gallatin Avenue</div>
+              <div className="text-base md:text-lg group-hover:text-indigo-600 transition-colors">Nashville, TN 37206</div>
+            </a>
           </div>
         </div>
         <RSVPButton />
