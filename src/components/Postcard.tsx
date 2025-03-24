@@ -12,7 +12,7 @@ const Postcard: React.FC<PostcardProps> = ({ className = '' }) => {
   return (
     <div className={`perspective-[1000px] w-full flex justify-center ${className}`}>
       <div 
-        className={`w-full max-w-[600px] aspect-[3/2] relative transition-transform duration-1000 cursor-pointer`}
+        className={`w-full max-w-[600px] h-[40vh] md:h-auto md:aspect-[3/2] relative transition-transform duration-1000 cursor-pointer`}
         style={{ 
           transformStyle: 'preserve-3d',
           transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0)'
