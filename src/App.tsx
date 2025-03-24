@@ -3,7 +3,7 @@ import WeddingContent from './components/WeddingContent';
 
 function App() {
   return (
-    <div className="flex justify-center items-center p-4">
+    <div className="min-h-[calc(100vh-40px)] flex justify-center items-center p-4">
       <DeviceFrame>
         <WeddingContent />
       </DeviceFrame>
